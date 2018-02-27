@@ -33,6 +33,7 @@ The *Word2Id.csv* file contains the symbols vocabulary, and looks like this:
 "minister",23,0
 "prime",26,0
 "that",31,0
+[...]
 ```
 The first column contains the word form or the POS tag, the second column an unique identifier, the third column a meta information to distinguish words from POS tags (i.e., 0 for words, 2 for POS tag).
 
@@ -42,6 +43,7 @@ The *Cooccur.csv* file looks like this:
 ```
 1.0 17:1.0 31:1.0 7:1.0 2:1.0
 2.0 23:1.0 26:1.0 6:2.0
+[...]
 ```
 Please read the libfm manual (http://www.libfm.org/libfm-1.42.manual.pdf) for an extensive description of this format. Here, the first line conveys the information that symbols with id 17, 31, 7, 2 (all with value 1.0) co-occur in the corpus with frequency 1.0.
 
