@@ -60,5 +60,4 @@ You can use TensorBoard to explore the model internals, as follows:
 tensorboard --logdir log/
 ```
 
-![Alt text](screenshots/tensorboard1.png?raw=true "TensorBoard1")
-![Alt text](screenshots/tensorboard2.png?raw=true "TensorBoard2")
+![TensorBoard](screenshots/tensorboard2.png?raw=true "TensorBoard")
