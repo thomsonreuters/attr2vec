@@ -3,7 +3,7 @@
 
 TensorFlow implementation of the attr2vec model, based on the following publication:
 
-Fabio Petroni, Vassilis Plachouras, Timothy Nugent and Jochen L.~Leidner: "attr2vec: : Jointly Learning Word and Contextual Attribute Embeddings with Factorization Machines." In: Proceedings of the 16th Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL), 2018.
+- Fabio Petroni, Vassilis Plachouras, Timothy Nugent and Jochen L.~Leidner: "attr2vec: : Jointly Learning Word and Contextual Attribute Embeddings with Factorization Machines." In: Proceedings of the 16th Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL), 2018.
 
 If you use the application please cite the paper.
 
