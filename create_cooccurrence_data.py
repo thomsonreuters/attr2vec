@@ -1,18 +1,22 @@
+
+# parameters
 WINDOW_SIZE = 5
 MIN_COOCCUR_VALUE = 1
-cooccur_map = {}
-
 COOCCURENCE_FILE = "Cooccur.csv"
 WORD2ID_FILE = "Word2Id.csv"
 
+# main data structures
+cooccur_map = {}
+word2id = {}
+
+# example
 text = "Prime Minister Theresa May will remind her cabinet that discussions must remain private"
 text2 = "Theresa Mary May is a British politician who has served as Prime Minister"
-
 sentences = []
 sentences.append(text.lower().split())
 sentences.append(text2.lower().split())
 
-word2id = {}
+# populate word2id
 id = 1
 for sentence in sentences:
     for word in sentence:
@@ -20,6 +24,7 @@ for sentence in sentences:
             word2id[word] = id
             id += 1
 
+# populate cooccur_map
 for sentence in sentences:
     for index_center in range(len(sentence)):
         center_word = sentence[index_center]
@@ -59,13 +64,12 @@ for sentence in sentences:
                 cooccur_map[str_att] += (1/distance) 
             except:
                 print("error for word "+str(right_word))
-            
             index_right -= 1
 
-# write cooccurence file
+# write co-occurence file
 with open(COOCCURENCE_FILE,'w') as f:
     for str_att,cooccur in cooccur_map.items():
-        cooccur_map[str_att] /= 2 # avoid to count the cooccurrence of each pair twice
+        cooccur_map[str_att] /= 2 # avoid to count the co-occurrence of each pair twice
         if cooccur_map[str_att] >= MIN_COOCCUR_VALUE:
             f.write("{} {}\n".format(cooccur_map[str_att],str_att))
 
